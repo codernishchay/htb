@@ -1,0 +1,72 @@
+Starting Nmap 7.91 ( https://nmap.org ) at 2020-12-24 22:00 EST
+NSE: Loaded 153 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 22:00
+Completed NSE at 22:00, 0.00s elapsed
+Initiating NSE at 22:00
+Completed NSE at 22:00, 0.00s elapsed
+Initiating NSE at 22:00
+Completed NSE at 22:00, 0.00s elapsed
+Initiating Ping Scan at 22:00
+Scanning 10.10.10.204 [4 ports]
+Completed Ping Scan at 22:00, 0.30s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 22:00
+Completed Parallel DNS resolution of 1 host. at 22:00, 0.02s elapsed
+Initiating SYN Stealth Scan at 22:00
+Scanning 10.10.10.204 [1000 ports]
+Discovered open port 8080/tcp on 10.10.10.204
+Discovered open port 135/tcp on 10.10.10.204
+Completed SYN Stealth Scan at 22:00, 20.61s elapsed (1000 total ports)
+Initiating Service scan at 22:00
+Scanning 2 services on 10.10.10.204
+Completed Service scan at 22:00, 7.28s elapsed (2 services on 1 host)
+Initiating OS detection (try #1) against 10.10.10.204
+Retrying OS detection (try #2) against 10.10.10.204
+Initiating Traceroute at 22:00
+Completed Traceroute at 22:00, 0.22s elapsed
+Initiating Parallel DNS resolution of 2 hosts. at 22:00
+Completed Parallel DNS resolution of 2 hosts. at 22:00, 0.07s elapsed
+NSE: Script scanning 10.10.10.204.
+Initiating NSE at 22:00
+Completed NSE at 22:01, 6.49s elapsed
+Initiating NSE at 22:01
+Completed NSE at 22:01, 2.02s elapsed
+Initiating NSE at 22:01
+Completed NSE at 22:01, 0.00s elapsed
+Nmap scan report for 10.10.10.204
+Host is up (0.19s latency).
+Not shown: 998 filtered ports
+PORT     STATE SERVICE VERSION
+135/tcp  open  msrpc   Microsoft Windows RPC
+8080/tcp open  upnp    Microsoft IIS httpd
+| http-auth: 
+| HTTP/1.1 401 Unauthorized\x0D
+|_  Basic realm=Windows Device Portal
+|_http-title: Site doesn't have a title.
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows XP|7 (89%)
+OS CPE: cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_7
+Aggressive OS guesses: Microsoft Windows XP SP3 (89%), Microsoft Windows XP SP2 (86%), Microsoft Windows 7 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 8080/tcp)
+HOP RTT       ADDRESS
+1   206.79 ms 10.10.14.1
+2   206.89 ms 10.10.10.204
+
+NSE: Script Post-scanning.
+Initiating NSE at 22:01
+Completed NSE at 22:01, 0.00s elapsed
+Initiating NSE at 22:01
+Completed NSE at 22:01, 0.00s elapsed
+Initiating NSE at 22:01
+Completed NSE at 22:01, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 43.68 seconds
+           Raw packets sent: 2099 (96.088KB) | Rcvd: 45 (2.576KB)
